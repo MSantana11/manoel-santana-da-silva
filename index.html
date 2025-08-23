@@ -38,17 +38,23 @@
             max-width: 600px;
             margin: 0 auto;
         }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff; /* Cor de fundo do botão */
-            color: #fff; /* Cor do texto no botão */
-            text-decoration: none; /* Remova sublinhado de links */
-            border: none; /* Remova a borda do botão */
-            border-radius: 5px; /* Cantos arredondados */
-            font-size: 16px; /* Tamanho da fonte */
-            text-align: center;
-            cursor: pointer; /* Mude o cursor para uma mão quando passar o mouse */
+        .custom-button {
+            background-color: #1649ff;
+            color: #FFFFFF; 
+            font-family: Arial, system-ui, sans-serif;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: normal;
+            border: 1px solid #E2E8F0;
+        }
+        .custom-button:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            filter: brightness(110%);
         }
     </style>
 </head>
@@ -56,11 +62,11 @@
 <body>
 <!-- Menu de navegacao do site -->
     <ul class="navbar">
-      <li><a href="index.html"><button>INICIO</button></a>
-      <li><a href="perfil.html"><button>PERFIL</button></a>
-      <li><a href="contato.html"><button>CONTATO</button></a>
+      <li><a href="index.html" target="_self" class="custom-button" rel="" aria-label="INICIO">INICIO</a>
+      <li><a href="perfil.html">PERFIL</a>
+      <li><a href="contato.html">CONTATO</a>
     </ul>
-    
+
     <div class="container">
         <h1><p></p>Olá !!! Tudo bem ?</p></h1>
         <h2>Bem-vindo à minha página.</h2>
@@ -86,6 +92,7 @@
     </div>
 </body>
 </html>
+
 
 
 
