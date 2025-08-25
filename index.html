@@ -26,25 +26,22 @@
             filter: brightness(110%);
         }
         body {
-            /* Define a imagem de fundo */
-            background-image: url('fundo_techno.jpeg');
-            /* Evita que a imagem se repita */
-            background-repeat: no-repeat;
-            /* Faz a imagem cobrir toda a tela */
-            background-size: cover;
-            /* Centraliza a imagem */
-            background-position: center;
-            /* para que a imagem não role com o conteúdo */
-            background-attachment: fixed;
+            background-image: url('fundo_techno.jpeg'); /* Define a imagem de fundo. Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
+            background-size: cover; /* Faz a imagem cobrir toda a área */
+            background-repeat: no-repeat; /* Impede a repetição da imagem */
+            background-position: center center; /* Centraliza a imagem */
+            background-attachment: fixed; /* Opcional: faz a imagem ficar fixa quando a página rola, para que a imagem não role com o conteúdo */
+            height: 100vh; /* Garante que o fundo ocupe toda a altura da viewport */
+            margin: 0; /* Remove as margens padrão */
             /* Define uma cor de fundo para caso a imagem não carregue ou não cubra tudo */
              /*background-color: #f0f0f0;  */
-            /* */
+            /* 
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
+            margin: 0; */
             /*background-color: #4682B4;
             color: #333; */
         }
@@ -106,6 +103,7 @@
     </div>
 </body>
 </html>
+
 
 
 
