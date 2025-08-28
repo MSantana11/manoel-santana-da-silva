@@ -47,6 +47,17 @@
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        .navbar {
+            position: fixed; /* Fixa o elemento na tela */
+            left: 0; /* Posiciona no lado esquerdo */
+            top: 0; /* Posiciona no topo da janela */
+            width: 200px; /* Define a largura do menu */
+            height: 100vh; /* Ocupa 100% da altura da viewport (tela) */
+            background-color: #f1f1f1; /* Cor de fundo do menu */
+            overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo exceder a altura */
+            padding: 10px; /* Espaçamento interno do menu */
+            box-sizing: border-box; /* Inclui padding e border no tamanho total */
+        }
         h1 {
             color: #007BFF;
             font-size: 2.5em;
@@ -75,12 +86,13 @@
 <body>
 <!-- Menu de navegacao do site -->
     <ul class="navbar">
-      <li><a href="index.html" target="_self" class="custom-button" rel="" aria-label="INICIO">INICIO</a><br><br>
-      <li><a href="perfil.html" target="_self" class="custom-button" rel="" aria-label="PERFIL">PERFIL</a><br><br>
-      <li><a href="certificacoes.html" target="_self" class="custom-button" rel="" aria-label="PERFIL">CERTIFICAÇÕES</a><br><br>
-      <li><a href="cursos.html" target="_self" class="custom-button" rel="" aria-label="INICIO">CURSOS</a><br><br>
-      <li><a href="projetos.html" target="_self" class="custom-button" rel="" aria-label="PERFIL">PROJETOS</a><br><br>
-      <li><a href="contato.html" target="_self" class="custom-button" rel="" aria-label="CONTATOS">CONTATOS</a>    </ul>
+        <li><a href="index.html" target="_self" class="custom-button" rel="" aria-label="INICIO">INICIO</a><br><br>
+        <li><a href="perfil.html" target="_self" class="custom-button" rel="" aria-label="PERFIL">PERFIL</a><br><br>
+        <li><a href="certificacoes.html" target="_self" class="custom-button" rel="" aria-label="PERFIL">CERTIFICAÇÕES</a><br><br>
+        <li><a href="cursos.html" target="_self" class="custom-button" rel="" aria-label="INICIO">CURSOS</a><br><br>
+        <li><a href="projetos.html" target="_self" class="custom-button" rel="" aria-label="PERFIL">PROJETOS</a><br><br>
+        <li><a href="contato.html" target="_self" class="custom-button" rel="" aria-label="CONTATOS">CONTATOS</a>
+    </ul>
     
       <div class="container">
         <h2>Projetos</h2>
