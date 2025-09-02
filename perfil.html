@@ -42,13 +42,17 @@
         }
         .container {
             text-align: center;
-            top: 0; /* Posiciona no topo da janela */
+            position: fixed; /* Define o tipo de posicionamento */
+            top: 0; /* Alinha o elemento ao topo da tela */
+            left: 50%; /* Centraliza o elemento horizontalmente */
+            transform: translateX(-50%); /* Ajuste para centralização perfeita */
             /*background: #B0C4DE;*/
             padding: 80px;
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             /*width: 1500px; /* Altere para a largura desejada */
             /*height: 300px; /* Altere para a altura desejada */
+            
         }
         .navbar {
             position: fixed; /* Fixa o elemento na tela */
