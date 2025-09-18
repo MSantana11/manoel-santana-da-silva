@@ -58,15 +58,6 @@
             padding: 10px; /* Espaçamento interno do menu */
             box-sizing: border-box; /* Inclui padding e border no tamanho total */
         }
-        /* Contêiner para o menu e o título */
-        .menu-fixo {
-            position: fixed;
-            top: 5%;
-            left: 50%;
-            transform: translate(-50%); /* Centraliza o elemento com base no seu próprio tamanho */
-            text-align: center; /* Centraliza o texto e os botões horizontalmente */
-            z-index: 1000;
-        }        
         /* Estilo geral para os botões do menu 3D */
         .menu-3d {
             display: flex; /* Define o container como flexbox */
@@ -75,6 +66,12 @@
             justify-content: center;
             align-items: center; /* **Centraliza os itens na horizontal** */
             gap: 20px; /* Adiciona 20px de espaço entre os botões */
+            position: fixed;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%); /* Centraliza o elemento com base no seu próprio tamanho */
+            text-align: center; /* Centraliza o texto e os botões horizontalmente */
+            z-index: 1000;
         }
         /* O que acontece quando o mouse passa por cima */
         .menu-3d a {
