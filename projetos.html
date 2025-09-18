@@ -81,7 +81,8 @@
             box-shadow: 0 5px 0 #123bb5; /* Sombra para o efeito 3D */
             transition: all 0.3s ease; /* Transição suave para todas as propriedades */
             transform-style: preserve-3d; /* Importante para o efeito 3D */
-            transform-origin: center top; /* Origem da rotação */
+            /*transform-origin: center top;*/ /* Origem da rotação - rotação ou transformação 3D será feita a partir do centro da borda superior do elemento*/
+            transform-origin: center center; /* Origem da rotação - A transformação é feita a partir do centro exato*/
         }
         .menu-3d a:hover {
             transform: translateY(5px) rotateX(90deg); /* Mover para baixo e rotacionar */
