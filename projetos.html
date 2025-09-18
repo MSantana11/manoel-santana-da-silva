@@ -58,73 +58,35 @@
             padding: 10px; /* Espaçamento interno do menu */
             box-sizing: border-box; /* Inclui padding e border no tamanho total */
         }
-        /* Contêiner para o menu e o título */
-        .menu-fixo {
-            position: fixed;
-            top: 5%;
-            left: 50%;
-            transform: translate(-50%); /* Centraliza o elemento com base no seu próprio tamanho */
-            text-align: center; /* Centraliza o texto e os botões horizontalmente */
-            z-index: 1000;
-        }
-
-        /* Esconde os radio buttons */
-        .menu-3d input[type="radio"] {
-            display: none;
-        }
-        /* Estilo para a área de conteúdo */
-        .conteudos {
-            margin-top: 20px;
-            color: #fff;
-            font-size: 1.2em;
-            text-shadow: 1px 1px 2px #000;
-        }
-        /* Esconde todos os conteúdos por padrão */
-        .conteudos > div {
-            display: none;
-        }
-        /* Mostra o conteúdo correspondente quando o radio button está marcado */
-        #tab-python:checked ~ .conteudos #conteudo-python,
-        #tab-cobol:checked ~ .conteudos #conteudo-cobol {
-            display: block;
-        }
-        /* Os botões <a> agora são rótulos para os radios. Mantemos a aparência de botões */
-        .menu-3d .button-label {
-        /* Use as mesmas propriedades do seu .menu-3d a */
-            position: relative;
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 0;
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.2em;
-            background-color: #1649ff;
-            border-radius: 4px;
-            box-shadow: 0 5px 0 #123bb5;
-            transition: all 0.3s ease;
-            transform-style: preserve-3d;
-            transform-origin: center top;
-        }
-        .menu-3d .button-label:hover {
-            transform: translateY(5px) rotateX(90deg);
-            box-shadow: 0 0 0 #123bb5;
-        }
-        /* Estilo para o pseudo-elemento ::before */
-        .menu-3d .button-label::before {
-            content: attr(data-hover);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        /* Estilo geral para os botões do menu 3D */
+       .menu-3d {
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-            background-color: #0d2c80;
-            color: #fff;
-            border-radius: 4px;
-            transform: rotateX(-90deg);
-            transform-origin: center bottom;
+            gap: 20px; /* Adiciona 20px de espaço entre os botões */
+        }
+        /* O que acontece quando o mouse passa por cima */
+        .menu-3d a:hover {
+            transform: translateY(5px) rotateX(90deg);
+            box-shadow: 0 0 0 #123bb5;
+        }
+        /* A palavra que irá aparecer no efeito 3D */
+        .menu-3d a::before {
+            content: attr(data-hover);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0d2c80;
+            color: #fff;
+            border-radius: 4px;
+            transform: rotateX(-90deg);
+            transform-origin: center bottom;
         }
         h1 {
             color: #007BFF;
@@ -150,7 +112,6 @@
         }
     </style>
 </head>
-
 <body>
 <!-- Menu de navegacao do site -->
     <ul class="navbar">
@@ -161,49 +122,24 @@
         <li><a href="projetos.html" target="_self" class="custom-button" rel="" aria-label="PERFIL">PROJETOS</a><br><br>
         <li><a href="contato.html" target="_self" class="custom-button" rel="" aria-label="CONTATOS">CONTATOS</a>
     </ul>
-</body>
-
-    <div class="menu-fixo">
-        <h2>Projetos</h2>
-        <nav class="menu-3d">
-            <a href="#" data-hover="PYTHON">PYTHON</a>
-            <a href="#" data-hover="COBOL">COBOL</a>
-        </nav>
-    </div>
-
-<body>
-    <div class="menu-fixo">
-        <h2>Projetos</h2>
-        
-        <div class="menu-3d">
-            <input type="radio" name="menu-tab" id="tab-python" checked>
-            <a href="#tab-python" class="button-label" data-hover="PYTHON">PYTHON</a>
-            
-            <input type="radio" name="menu-tab" id="tab-cobol">
-            <a href="#tab-cobol" class="button-label" data-hover="COBOL">COBOL</a>
-        </div>
-        <div class="conteudos">
-            <div id="conteudo-python">
-                <ol>
-                    <p><strong>Python - Gráfico da população brasileira por região</strong></p>
-                    <img width="800px" style="padding-right: 30px;" src="imagens/Brasil_Regiao_grafbarra.png">
-                    <img width="600px" style="padding-right: 30px;" src="imagens/Brasil_Regiao_grafpizza.png">
-                    <br><br>
-                </ol>                
-        </div>
-            <div id="conteudo-cobol">
-                <ol>
-                    <p><strong>COBOL - CNPJ Alfanumérico - Validação</strong></p>
-                    <video width="720" height="440" controls="controls" autoplay="autoplay">
-                    <source src="video/CNPJ01_2025.mp4" type="video/mp4">
-                    <object data="" width="720" height="440">
-                    <embed width="720" height="440" src="video/CNPJ01_2025.mp4">
-                </ol>
-        </div>
-    </div>
-</body>
-<body>    
+    
     <div class="container">
+        <h2>Projetos</h2>
+        <nav class="bg menu-3d">
+            <a href="#" class="custom-button" data-hover="PYTHON">PYTHON</a>
+            <a href="#" class="custom-button" data-hover="COBOL">COBOL</a>
+        </nav>
+        <ol>
+            <p><strong>Python - Gráfico da população brasileira por região</strong></p>
+            <img width="800px" style="padding-right: 30px;" src="imagens/Brasil_Regiao_grafbarra.png">
+            <img width="600px" style="padding-right: 30px;" src="imagens/Brasil_Regiao_grafpizza.png">
+            <br><br>
+            <p><strong>COBOL - CNPJ Alfanumérico - Validação</strong></p>
+            <video width="720" height="440" controls="controls" autoplay="autoplay">
+            <source src="video/CNPJ01_2025.mp4" type="video/mp4">
+            <object data="" width="720" height="440">
+            <embed width="720" height="440" src="video/CNPJ01_2025.mp4">
+        </ol>
         <br>
         <p align="center">
             <a href="https://github.com/MSantana11?tab=repositories&sort=stargazers">
