@@ -67,7 +67,7 @@
             align-items: center; /* **Centraliza os itens na horizontal** */
             gap: 20px; /* Adiciona 20px de espaço entre os botões */
             position: fixed;
-            top: 5%;
+            top: 15%;
             left: 50%;
             transform: translate(-50%); /* Centraliza o elemento com base no seu próprio tamanho */
             text-align: center; /* Centraliza o texto e os botões horizontalmente */
@@ -113,7 +113,7 @@
         }
         #conteudo-principal {
             text-align: center;
-            padding-top: 150px; /* Adiciona espaço acima para não ser coberto pelos botões */
+            padding-top: 50px; /* Adiciona espaço acima para não ser coberto pelos botões */
             color: #ffffff; /* Cor branca para o texto */
             text-shadow: 2px 2px 4px #000000; /* Sombra para destacar o texto */
         }
@@ -166,7 +166,7 @@
             const conteudoDiv = document.getElementById('conteudo-principal');
             if (tipo === 'python') {
                 conteudoDiv.innerHTML = `
-                    <h2 class="titulo-conteudo"><strong>Python - Gráfico da população brasileira por região</strong></h2>
+                    <h2 class="titulo-conteudo">Python - Gráfico da população brasileira por região</h2>
                     <div class="imagens-container">
                         <img width="800px" style="padding-right: 30px;" src="imagens/Brasil_Regiao_grafbarra.png">
                         <img width="600px" style="padding-right: 30px;" src="imagens/Brasil_Regiao_grafpizza.png">
