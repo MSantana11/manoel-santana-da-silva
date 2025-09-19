@@ -151,9 +151,10 @@
         <li><a href="projetos.html" target="_self" class="custom-button" rel="" aria-label="PERFIL">PROJETOS</a><br><br>
         <li><a href="contato.html" target="_self" class="custom-button" rel="" aria-label="CONTATOS">CONTATOS</a>
     </ul>
-    
-    <div class="container">
+    <div class="header-fixo">
         <h2>Projetos</h2>
+    </div>
+    <div class="container">
         <nav class="menu-3d">
             <a href="#" data-hover="PYTHON" onclick="mostrarConteudo('python')">PYTHON</a>
             <a href="#" data-hover="COBOL" onclick="mostrarConteudo('cobol')">COBOL</a>
@@ -166,7 +167,7 @@
             const conteudoDiv = document.getElementById('conteudo-principal');
             if (tipo === 'python') {
                 conteudoDiv.innerHTML = `
-                    <p class="titulo-conteudo">Python - Gráfico da população brasileira por região</p>
+                    <p class="titulo-conteudo"><strong>Python - Gráfico da população brasileira por região</strong></p>
                     <div class="imagens-container">
                         <img width="800px" style="padding-right: 30px;" src="imagens/Brasil_Regiao_grafbarra.png">
                         <img width="600px" style="padding-right: 30px;" src="imagens/Brasil_Regiao_grafpizza.png">
@@ -174,7 +175,7 @@
                 `;                
             } else if (tipo === 'cobol') {
                 conteudoDiv.innerHTML = `
-                    <p class="titulo-conteudo">COBOL - CNPJ Alfanumérico - Validação</p>
+                    <p class="titulo-conteudo"><strong>COBOL - CNPJ Alfanumérico - Validação</strong></p>
                     <video width="720" height="440" controls="controls" autoplay="autoplay">
                     <source src="video/CNPJ01_2025.mp4" type="video/mp4">
                     <object data="" width="720" height="440">
