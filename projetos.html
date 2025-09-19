@@ -102,9 +102,9 @@
             justify-content: center;
             align-items: center;
             transform: rotateX(-90deg); /* Rotação inicial para "esconder" a palavra */
-            transform-origin: center bottom;
+            transform-origin: 50% 50% -25px;
             transition: transform 0.1s ease; /* Adiciona transição de opacidade */
-        }        
+        }
         /* O texto original do botão */
         .menu-3d a span {
             display: block;
@@ -119,7 +119,7 @@
         /* Quando o mouse passa por cima, o efeito é aplicado */
         .menu-3d a:hover::before {
             transform: rotateX(0deg); /* A palavra rotaciona e fica visível */
-        }        
+        }
         h1 {
             color: #007BFF;
             font-size: 2.5em;
