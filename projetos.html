@@ -81,6 +81,8 @@
             box-shadow: 0 5px 0 #0d2c80; /* Sombra inicial do botão */
             transition: transform 0.1s ease, box-shadow 0.1s ease;
             transform-style: preserve-3d; /* Permite que os filhos preservem a posição 3D */
+            font-weight: bold; /* Adiciona negrito para o texto original */
+            z-index: 1; /* Garante que a face principal está na frente */
         }
         /* O que acontece quando o mouse passa por cima */
         .menu-3d a:hover {
@@ -104,10 +106,12 @@
             transform: rotateX(-90deg); /* Rotação inicial para "esconder" a palavra */
             transform-origin: center bottom;
             transition: transform 0.1s ease;
+            z-index: -1; /* Manda a face 3D para trás da face principal */
         }
         /* Quando o mouse passa por cima, o efeito é aplicado */
         .menu-3d a:hover::before {
             transform: rotateX(0deg); /* A palavra rotaciona e fica visível */
+            z-index: 2; /* Traz a face 3D para a frente quando o mouse está sobre o botão */
         }
         h1 {
             color: #007BFF;
