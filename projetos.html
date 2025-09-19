@@ -81,12 +81,12 @@
             box-shadow: 0 5px 0 #0d2c80; /* Sombra inicial do botão */
             transition: transform 0.1s ease, box-shadow 0.1s ease;
             transform-style: preserve-3d; /* Permite que os filhos preservem a posição 3D */
-        }
+        }        
         /* O que acontece quando o mouse passa por cima */
         .menu-3d a:hover {
-            transform: translateY(5px) rotateX(90deg);
-            box-shadow: 0 0 0 #123bb5;
-        }
+            transform: translateY(5px);
+            box-shadow: 0 0 0 #0d2c80;
+        }        
         /* A palavra que irá aparecer no efeito 3D */
         .menu-3d a::before {
             content: attr(data-hover);
@@ -98,11 +98,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #0d2c80;
+            background-color: #0d2c80; /* Cor da face 3D */
             color: #fff;
             border-radius: 4px;
-            transform: rotateX(-90deg);
+            transform: rotateX(-90deg); /* Rotação inicial para "esconder" a palavra */
             transform-origin: center bottom;
+            transition: transform 0.1s ease;
+        }
+        /* Quando o mouse passa por cima, o efeito é aplicado */
+        .menu-3d a:hover::before {
+            transform: rotateX(0deg); /* A palavra rotaciona e fica visível */
         }
         h1 {
             color: #007BFF;
