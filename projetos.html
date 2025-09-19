@@ -106,8 +106,8 @@
             border-radius: 4px;
             transform: rotateX(-90deg); /* Rotação inicial para "esconder" a palavra */
             transform-origin: center bottom;
-            transition: transform 0.1s ease;
-            z-index: -1; /* Manda a face 3D para trás da face principal */
+            transition: transform 0.1s ease, opacity 0.1s ease; /* Adiciona transição de opacidade */
+            opacity: 0; /* Começa invisível */
         }
         /* Quando o mouse passa por cima, o efeito é aplicado */
         .menu-3d a:hover::before {
