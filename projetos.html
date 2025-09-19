@@ -32,7 +32,10 @@
             background-position: center; /* Centraliza a imagem */
             background-attachment: fixed; /* Opcional: faz a imagem ficar fixa quando a página, para que a imagem não role com o conteúdo */
             font-family: Arial, sans-serif;
-            padding-top: 10px; /* Adiciona um acolchoamento fixo no topo */
+            margin-top: 200px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
             margin: 0;
             background-color: #4682B4;
             color: #333;
@@ -68,12 +71,6 @@
             justify-content: center;
             align-items: center; /* **Centraliza os itens na horizontal** */
             gap: 20px; /* Adiciona 20px de espaço entre os botões */
-            position: fixed;
-            top: 70px; /* Adiciona uma margem para ficar abaixo do título */
-            left: 50%;
-            transform: translate(-50%); /* Centraliza o elemento com base no seu próprio tamanho */
-            text-align: center; /* Centraliza o texto e os botões horizontalmente */
-            z-index: 1000; /* Garante que o menu fique na frente */
         }
         /* O que acontece quando o mouse passa por cima */
         .menu-3d a {
@@ -119,17 +116,17 @@
             top: 5px; /* Posição fixa no topo, abaixo do título */
             left: 50%;
             transform: translateX(-50%); /* Centraliza na horizontal */
+            width: 100%;
+            text-align: center;
+            padding: 20px 0; /* Espaçamento interno */
             z-index: 1000; /* Garante que fique acima de outros elementos */
-        }
+        }        
         #conteudo-principal {
             text-align: center;
             padding-top: 120px; /* Adiciona espaço acima para não ser coberto pelos botões */
             color: #ffffff; /* Cor branca para o texto */
             text-shadow: 2px 2px 4px #000000; /* Sombra para destacar o texto */
-            display: flex;
-            flex-direction: column;
             align-items: center;
-            z-index: 1; /* Valor menor para ficar atrás dos elementos fixos */
         }
         .imagens-container {
             display: flex;
@@ -178,15 +175,22 @@
         <li><a href="projetos.html" target="_self" class="custom-button" rel="" aria-label="PERFIL">PROJETOS</a><br><br>
         <li><a href="contato.html" target="_self" class="custom-button" rel="" aria-label="CONTATOS">CONTATOS</a>
     </ul>
-    <div class="header-fixo">
+  <!--  <div class="header-fixo">
         <h2>Projetos</h2>
     </div>
-    <!--<div class="container">-->
+    <div class="container">
     <nav class="menu-3d">
         <a href="#" data-hover="PYTHON" onclick="mostrarConteudo('python')">PYTHON</a>
         <a href="#" data-hover="COBOL" onclick="mostrarConteudo('cobol')">COBOL</a>
     </nav>
     <!--</div>-->
+    <div class="header-fixo">
+        <h2 class="titulo-fixo">Projetos</h2>
+        <nav class="menu-3d">
+            <a href="#" data-hover="PYTHON" onclick="mostrarConteudo('python')">PYTHON</a>
+            <a href="#" data-hover="COBOL" onclick="mostrarConteudo('cobol')">COBOL</a>
+        </nav>
+    </div>
     <div id="conteudo-principal">
         </div>
     <script>
