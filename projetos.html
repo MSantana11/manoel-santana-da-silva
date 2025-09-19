@@ -66,6 +66,22 @@
             align-items: center;
             gap: 20px; /* Adiciona 20px de espaço entre os botões */
         }
+        /* Estilo geral para os botões do menu 3D */
+        .menu-3d a {
+            position: relative; /* Essencial para o posicionamento dos pseudoelementos */
+            display: block; /* Para que o link ocupe toda a área do botão */
+            width: 150px; /* Largura para os botões */
+            height: 50px; /* Altura para os botões */
+            text-align: center; /* Centraliza o texto */
+            line-height: 50px; /* Alinha o texto verticalmente */
+            text-decoration: none;
+            background-color: #1649ff;
+            color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 5px 0 #0d2c80; /* Sombra inicial do botão */
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+            transform-style: preserve-3d; /* Permite que os filhos preservem a posição 3D */
+        }
         /* O que acontece quando o mouse passa por cima */
         .menu-3d a:hover {
             transform: translateY(5px) rotateX(90deg);
