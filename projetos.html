@@ -71,7 +71,7 @@
             left: 50%;
             transform: translate(-50%); /* Centraliza o elemento com base no seu próprio tamanho */
             text-align: center; /* Centraliza o texto e os botões horizontalmente */
-            z-index: 1000;
+            z-index: 1000; /* Garante que o menu fique na frente */
         }
         /* O que acontece quando o mouse passa por cima */
         .menu-3d a {
@@ -127,6 +127,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            z-index: 1; /* Valor menor para ficar atrás dos elementos fixos */
         }
         .imagens-container {
             display: flex;
