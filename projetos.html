@@ -67,7 +67,7 @@
             align-items: center; /* **Centraliza os itens na horizontal** */
             gap: 20px; /* Adiciona 20px de espaço entre os botões */
             position: fixed;
-            top: 5%;
+            top: 100px; /* Adiciona uma margem para ficar abaixo do título */
             left: 50%;
             transform: translate(-50%); /* Centraliza o elemento com base no seu próprio tamanho */
             text-align: center; /* Centraliza o texto e os botões horizontalmente */
@@ -111,6 +111,14 @@
             transform: rotateX(-90deg); /* Oculta a camada de trás */
             transform-origin: center bottom;
         }
+        /* Estilo para o cabeçalho fixo */
+        .header-fixo {
+            position: fixed;
+            top: 50px; /* Posição fixa no topo, abaixo do título */
+            left: 50%;
+            transform: translateX(-50%); /* Centraliza na horizontal */
+            z-index: 1000; /* Garante que fique acima de outros elementos */
+        }
         #conteudo-principal {
             text-align: center;
             padding-top: 80px; /* Adiciona espaço acima para não ser coberto pelos botões */
@@ -151,8 +159,7 @@
         <li><a href="projetos.html" target="_self" class="custom-button" rel="" aria-label="PERFIL">PROJETOS</a><br><br>
         <li><a href="contato.html" target="_self" class="custom-button" rel="" aria-label="CONTATOS">CONTATOS</a>
     </ul>
-    <!--<div class="header-fixo">-->
-    <div class="container">
+    <div class="header-fixo">
         <h2>Projetos</h2>
     </div>
     <!--<div class="container">-->
