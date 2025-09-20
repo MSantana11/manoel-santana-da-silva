@@ -83,8 +83,7 @@
             box-shadow: 0 5px 0 #123bb5; /* Sombra para o efeito 3D */
             transition: all 0.3s ease; /* Transição suave para todas as propriedades */
             transform-style: preserve-3d; /* Importante para o efeito 3D */
-            /*transform-origin: center top;*/ /* Origem da rotação - rotação ou transformação 3D será feita a partir do centro da borda superior do elemento*/
-            transform-origin: center center; /* Origem da rotação - A transformação é feita a partir do centro exato*/
+            transform-origin: center center; /* Origem da rotação - A transformação 3D é feita a partir do centro exato*/
         }
         .menu-3d a:hover {
             transform: translateY(5px) rotateX(90deg); /* Mover para baixo e rotacionar */
@@ -113,6 +112,9 @@
             color: #ffffff; /* Cor branca para o texto */
             text-shadow: 2px 2px 4px #000000; /* Sombra para destacar o texto */
             margin-top: -110px; /* Diminua este valor para aproximar dos botões */
+        }
+        p.titulo-conteudo {
+            margin-bottom: 5; /* 0 ou um valor pequeno como 5px */
         }
         h1 {
             color: #007BFF;
@@ -184,7 +186,7 @@
                     <div class="imagens-container">
                         <img width="800px" style="padding-right: 30px;" src="imagens/Brasil_Regiao_grafbarra.png">
                         </b>
-                        <img width="600px" style="padding-right: 30px;" src="imagens/Brasil_Regiao_grafpizza.png">
+                        <img width="600px" style="padding-right: 130px;" src="imagens/Brasil_Regiao_grafpizza.png">
                     </div>
                 `;                
             } else if (tipo === 'cobol') {
