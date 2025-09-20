@@ -32,12 +32,13 @@
             background-position: center; /* Centraliza a imagem */
             background-attachment: fixed; /* Opcional: faz a imagem ficar fixa quando a página, para que a imagem não role com o conteúdo */
             font-family: Arial, sans-serif;
-            background-color: #4682B4;
-            color: #333;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #4682B4;
+            color: #333;
         }
         .container {
             text-align: center;
@@ -65,6 +66,12 @@
             justify-content: center;
             align-items: center; /* **Centraliza os itens na horizontal** */
             gap: 20px; /* Adiciona 20px de espaço entre os botões */
+            position: fixed;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%); /* Centraliza o elemento com base no seu próprio tamanho */
+            text-align: center; /* Centraliza o texto e os botões horizontalmente */
+            z-index: 1000;
         }
         /* O que acontece quando o mouse passa por cima */
         .menu-3d a {
@@ -104,35 +111,11 @@
             transform: rotateX(-90deg); /* Oculta a camada de trás */
             transform-origin: center bottom;
         }
-        /* Estilo para o cabeçalho fixo */
-        .header-fixo {
-            position: fixed;
-            top: 5px; /* Posição fixa no topo, abaixo do título */
-            left: 50%;
-            transform: translateX(-50%); /* Centraliza na horizontal */
-            text-align: center;
-            padding: 20px 0; /* Espaçamento interno */
-            z-index: 1000; /* Garante que fique acima de outros elementos */
-        }
         #conteudo-principal {
             text-align: center;
-            padding-top: 120px; /* Adiciona espaço acima para não ser coberto pelos botões */
+            padding-top: 80px; /* Adiciona espaço acima para não ser coberto pelos botões */
             color: #ffffff; /* Cor branca para o texto */
             text-shadow: 2px 2px 4px #000000; /* Sombra para destacar o texto */
-            align-items: center;
-        }
-        .imagens-container {
-            display: flex;
-            flex-direction: column; /* Faz com que as imagens fiquem uma embaixo da outra */
-            justify-content: center; /* Centraliza os itens horizontalmente */
-            align-items: center; /* Centraliza os itens verticalmente */
-            gap: 20px; /* Espaço entre as imagens */
-            margin-top: 20px; /* Adiciona uma pequena margem acima das imagens */
-        }
-        .imagens-container img {
-            border: 5px solid #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         h1 {
             color: #007BFF;
@@ -168,17 +151,8 @@
         <li><a href="projetos.html" target="_self" class="custom-button" rel="" aria-label="PERFIL">PROJETOS</a><br><br>
         <li><a href="contato.html" target="_self" class="custom-button" rel="" aria-label="CONTATOS">CONTATOS</a>
     </ul>
-  <!--  <div class="header-fixo">
-        <h2>Projetos</h2>
-    </div>
     <div class="container">
-    <nav class="menu-3d">
-        <a href="#" data-hover="PYTHON" onclick="mostrarConteudo('python')">PYTHON</a>
-        <a href="#" data-hover="COBOL" onclick="mostrarConteudo('cobol')">COBOL</a>
-    </nav>
-    <!--</div>-->
-    <div class="header-fixo">
-        <h2 class="titulo-fixo">Projetos</h2>
+        <h2>Projetos</h2>
         <nav class="menu-3d">
             <a href="#" data-hover="PYTHON" onclick="mostrarConteudo('python')">PYTHON</a>
             <a href="#" data-hover="COBOL" onclick="mostrarConteudo('cobol')">COBOL</a>
@@ -191,7 +165,7 @@
             const conteudoDiv = document.getElementById('conteudo-principal');
             if (tipo === 'python') {
                 conteudoDiv.innerHTML = `
-                    <p class="titulo-conteudo"><strong>Python - Gráfico da população brasileira por região</strong></p>
+                    <p class="titulo-conteudo">Python - Gráfico da população brasileira por região</p>
                     <div class="imagens-container">
                         <img width="800px" style="padding-right: 30px;" src="imagens/Brasil_Regiao_grafbarra.png">
                         <img width="600px" style="padding-right: 30px;" src="imagens/Brasil_Regiao_grafpizza.png">
@@ -199,7 +173,7 @@
                 `;                
             } else if (tipo === 'cobol') {
                 conteudoDiv.innerHTML = `
-                    <p class="titulo-conteudo"><strong>COBOL - CNPJ Alfanumérico - Validação</strong></p>
+                    <p class="titulo-conteudo">COBOL - CNPJ Alfanumérico - Validação</p>
                     <video width="720" height="440" controls="controls" autoplay="autoplay">
                     <source src="video/CNPJ01_2025.mp4" type="video/mp4">
                     <object data="" width="720" height="440">
@@ -207,6 +181,22 @@
                 `;                
             }
         }
-    </script>
+    </script>    
+    <p align="center">
+        <a href="https://github.com/MSantana11?tab=repositories&sort=stargazers">
+            <img
+                alt="Total de estrelas" 
+                title="Total de estrelas GitHub" 
+                src="https://custom-icon-badges.demolab.com/github/stars/MSantana11?color=55960c&style=for-the-badge&labelColor=488207&logo=star&label=estrelas"
+            />
+        </a>
+        <a href="https://github.com/MSantana11?tab=followers">
+            <img 
+                alt="Seguidores" 
+                title="Me siga no GitHub" 
+                src="https://custom-icon-badges.demolab.com/github/followers/MSantana11?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Seguidores&logoColor=white"
+            />
+        </a>
+    </p>
 </body>
 </html>
