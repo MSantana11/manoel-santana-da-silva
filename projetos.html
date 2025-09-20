@@ -116,6 +116,11 @@
         p.titulo-conteudo {
             margin-bottom: -20px; /* 0 ou um valor pequeno como 5px */
         }
+        .imagens-container {
+            display: flex;
+            justify-content: center; /* Opcional: para centralizar as imagens */
+            gap: 20px; /* Adiciona 20px de espaço entre as imagens */
+        }
         h1 {
             color: #007BFF;
             font-size: 2.5em;
@@ -184,8 +189,8 @@
                 conteudoDiv.innerHTML = `
                     <p class="titulo-conteudo">Python - Gráfico da população brasileira por região</p>
                     <div class="imagens-container">
-                        <img width="800px" style="padding-right: 15px;" src="imagens/Brasil_Regiao_grafbarra.png">
-                        <img width="600px" style="padding-left: 15px;" src="imagens/Brasil_Regiao_grafpizza.png">
+                        <img width="800px" src="imagens/Brasil_Regiao_grafbarra.png">
+                        <img width="600px" src="imagens/Brasil_Regiao_grafpizza.png">
                     </div>
                 `;                
             } else if (tipo === 'cobol') {
