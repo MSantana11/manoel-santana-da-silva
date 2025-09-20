@@ -123,7 +123,11 @@
             flex-direction: column;
             align-items: center;
             margin-bottom: -60px; /* Adicione esta linha para diminuir o espaço abaixo da imagem*/
-        }        
+        }
+        .video-container {
+            text-align: center; /* Para garantir que o vídeo fique centralizado */
+            margin-bottom: -50px; /* Ajuste este valor para o que for necessário */
+        }
         h1 {
             color: #007BFF;
             font-size: 2.5em;
@@ -191,7 +195,7 @@
             const conteudoDiv = document.getElementById('conteudo-principal');
             if (tipo === 'python') {
                 conteudoDiv.innerHTML = `
-                    <p class="titulo-conteudo">Python - Gráfico da população brasileira por região</p>
+                    <p class="titulo-conteudo">PYTHON - Gráfico da população brasileira por região</p>
                     <div class="imagens-container">
                         <img width="800px" src="imagens/Brasil_Regiao_grafbarra.png">
                         <img width="600px" src="imagens/Brasil_Regiao_grafpizza.png">
@@ -200,13 +204,17 @@
             } else if (tipo === 'cobol') {
                 conteudoDiv.innerHTML = `
                     <p class="titulo-conteudo" style="margin-bottom: -3px;">COBOL - CNPJ Alfanumérico - Validação</p>
-                    <video width="720" height="440" controls="controls" autoplay="autoplay">
-                    <source src="video/CNPJ01_2025.mp4" type="video/mp4">
-                    <object data="" width="720" height="440">
-                    <embed width="720" height="440" src="video/CNPJ01_2025.mp4">
-                `;                
+                        <div class="video-container">
+                            <video width="720" height="440" controls="controls" autoplay="autoplay">
+                                <source src="video/CNPJ01_2025.mp4" type="video/mp4">
+                                <object data="" width="720" height="440">
+                                    <embed width="720" height="440" src="video/CNPJ01_2025.mp4">
+                                </object>
+                            </video>
+                        </div>
+                `;
             }
-        }
+        }        
     </script>
 </body>
 </html>
