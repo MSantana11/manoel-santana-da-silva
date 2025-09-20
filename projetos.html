@@ -32,13 +32,14 @@
             background-position: center; /* Centraliza a imagem */
             background-attachment: fixed; /* Opcional: faz a imagem ficar fixa quando a página, para que a imagem não role com o conteúdo */
             font-family: Arial, sans-serif;
-            display: flex;
+            /*display: flex;*/
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             background-color: #4682B4;
             color: #333;
+            text-align: center; /* Centraliza todo o texto do body */
         }
         .container {
             text-align: center;
@@ -66,12 +67,7 @@
             justify-content: center;
             align-items: center; /* **Centraliza os itens na horizontal** */
             gap: 20px; /* Adiciona 20px de espaço entre os botões */
-            position: fixed;
-            top: 5%;
-            left: 50%;
-            transform: translate(-50%); /* Centraliza o elemento com base no seu próprio tamanho */
-            text-align: center; /* Centraliza o texto e os botões horizontalmente */
-            z-index: 1000;
+            margin-top: 80px; /* Adiciona margem para afastar dos textos */
         }
         /* O que acontece quando o mouse passa por cima */
         .menu-3d a {
@@ -160,6 +156,22 @@
         </nav>
     <div id="conteudo-principal">
         </div>
+    <p align="center">
+        <a href="https://github.com/MSantana11?tab=repositories&sort=stargazers">
+            <img
+                alt="Total de estrelas" 
+                title="Total de estrelas GitHub" 
+                src="https://custom-icon-badges.demolab.com/github/stars/MSantana11?color=55960c&style=for-the-badge&labelColor=488207&logo=star&label=estrelas"
+            />
+        </a>
+        <a href="https://github.com/MSantana11?tab=followers">
+            <img 
+                alt="Seguidores" 
+                title="Me siga no GitHub" 
+                src="https://custom-icon-badges.demolab.com/github/followers/MSantana11?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Seguidores&logoColor=white"
+            />
+        </a>
+    </p>
     <script>
         function mostrarConteudo(tipo) {
             const conteudoDiv = document.getElementById('conteudo-principal');
@@ -181,22 +193,6 @@
                 `;                
             }
         }
-    </script>    
-    <p align="center">
-        <a href="https://github.com/MSantana11?tab=repositories&sort=stargazers">
-            <img
-                alt="Total de estrelas" 
-                title="Total de estrelas GitHub" 
-                src="https://custom-icon-badges.demolab.com/github/stars/MSantana11?color=55960c&style=for-the-badge&labelColor=488207&logo=star&label=estrelas"
-            />
-        </a>
-        <a href="https://github.com/MSantana11?tab=followers">
-            <img 
-                alt="Seguidores" 
-                title="Me siga no GitHub" 
-                src="https://custom-icon-badges.demolab.com/github/followers/MSantana11?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Seguidores&logoColor=white"
-            />
-        </a>
-    </p>
+    </script>
 </body>
 </html>
